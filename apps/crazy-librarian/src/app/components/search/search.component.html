@@ -1,1 +1,16 @@
-<p>search works!</p>
+<form #searchForm="ngForm" (ngSubmit)="onSubmit(searchForm)" class="container">
+    <h1>Book Search</h1>
+    <div class="search-bar">
+        <input type="text" id="searchValue" name="searchValue" placeholder="Enter book title or author" ngModel
+            required>
+        <button type="submit" [disabled]="!searchForm.valid">Search</button>
+    </div>
+    <div class="count">Count:{{resultCount$ | async | json}}</div>
+    <div class="table">
+        <ul>
+            <li *ngFor="let item of resultList$ | async"><a (click)="getText(item.id, item.formats)">{{ item.title }} </a> {{ getAuthors(item.authors) }}</li>
+        </ul>
+    </div>
+    <div class="book">{{bookText$ | async | json}}</div>
+
+</form>
