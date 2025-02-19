@@ -32,6 +32,7 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -50,12 +51,23 @@
                   "maximumError": "8kB"
                 }
               ],
+              "optimization":{
+                "styles":{
+                  "inlineCritical": false
+                }
+              },
+              "security": {
+                "autoCsp": true
+              },
               "outputHashing": "all"
             },
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "security": {
+                "autoCsp": true
+              }
             }
           },
           "defaultConfiguration": "production"
@@ -91,6 +103,7 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.scss"
             ],
             "scripts": []

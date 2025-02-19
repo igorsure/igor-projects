@@ -5,8 +5,9 @@ import { StarComponent } from './components/star/star.component';
 import { HomeComponent } from './components/home/home.component';
 
 export const routes: Routes = [
-    { path: '', redirectTo: '/home', component: HomeComponent },
+    { path: '', redirectTo: '/home',pathMatch:"full" },
     { path: 'constelations', component: ConstelationListComponent }, 
     { path: 'constelations/:id', component: ConstelationComponent },
-    { path: 'star/:id',component:StarComponent} 
+    { path: 'star/:id',component:StarComponent}, 
+    { path: 'home', component: HomeComponent },
  ];

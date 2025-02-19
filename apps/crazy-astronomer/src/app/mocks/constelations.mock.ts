@@ -1,4 +1,4 @@
-import { Constelation } from '../app/interfaces/constelation.interface';
+import { Constelation } from '../interfaces/constelation.interface';
 
 export const CONSTELATIONS: Constelation[] = [
   {
