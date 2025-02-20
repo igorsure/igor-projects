@@ -1,6 +1,6 @@
-import { Constelation } from '../interfaces/constelation.interface';
+import { Constellation } from "../interfaces/constellation.interface";
 
-export const CONSTELATIONS: Constelation[] = [
+export const CONSTELLATIONS: Constellation[] = [
   {
     abbr: 'And',
     name: 'Andromeda',

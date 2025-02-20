@@ -1,10 +1,9 @@
 <header>
     <nav> 
-        <a routerLink="/home" routerLinkActive="active">Home</a> 
-        <a routerLink="/constelations" routerLinkActive="active">Constelation List</a> 
-        <a routerLink="/constelations/:id" routerLinkActive="active">Constelation</a> 
-        <a routerLink="/star/:id" routerLinkActive="active">Star</a>
-        <!-- <label>{{constelationName}}</label> 
-        <label>{{starName}}</label>  -->
+        <a routerLink="/home" >Home</a> 
+        <a routerLink="/constellations" >Constellation List</a> 
+        <a routerLink="/constellations/:id" >Constellation</a> 
+        <a routerLink="/star/:id">Star</a>
+        <label>Constalation: <b>{{activeConstellationName$ | async}}</b></label> 
     </nav>
 </header>

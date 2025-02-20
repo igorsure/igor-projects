@@ -1,4 +1,4 @@
-export interface Constelation {
+export interface Constellation {
   abbr: string;
   name: string;
   genitive: string;
