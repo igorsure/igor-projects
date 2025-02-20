@@ -25,8 +25,8 @@ export class ConstellationComponent implements OnInit{
   starList: Star[] | null = null;
   starDataSource = new MatTableDataSource<Star>();
   displayedColumns: string[] = ['name','desig', 'spk','mag','bvc','ra','de'];
-  isStarList = true;
-  isConstellationMap = true;
+  isStarList = false;
+  isConstellationMap = false;
  
   ngOnInit(): void {  
     this.constellationAbbr = this.route.snapshot.paramMap.get('id') || '';
@@ -35,11 +35,18 @@ export class ConstellationComponent implements OnInit{
     this.starDataSource  =  new MatTableDataSource<Star>(this.starList) || null;
   }
   toggleStarList(): void{
+    this.resetTabs();
     this.isStarList = !this.isStarList;
+
    }
 
    toggleConstellationMap(): void{
+    this.resetTabs();
     this.isConstellationMap = !this.isConstellationMap;
+   }
+   resetTabs(){
+    this.isConstellationMap = false;
+    this.isStarList = false;
    }
   
 
