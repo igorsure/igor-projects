@@ -1,0 +1,31 @@
+Name: Sirius
+
+Designation: 9 Alp CMa
+
+HIP: 32349
+
+HD: 48915
+
+SAO: 151881
+
+Constellation: Canis Major (CMa)
+
+Magnitude: -1.44 (brightness)
+
+Distance: 8.6 light-years
+
+Radial Velocity: -7.6 km/s (speed relative to the Sun)
+
+Spectral Class: A0m... (main sequence star with metallic lines)
+
+B-V Color Index: -0.01 (color of the star)
+
+Effective Temperature: 9940 K
+
+Mass: 2.02 solar masses
+
+Radius: 1.711 solar radii
+
+Right Ascension: 6.75257 hours
+
+Declination: -16.71312 degrees
