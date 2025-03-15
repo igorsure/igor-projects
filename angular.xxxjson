@@ -20,9 +20,7 @@
             "outputPath": "dist/crazy-astronomer",
             "index": "apps/crazy-astronomer/src/index.html",
             "browser": "apps/crazy-astronomer/src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "apps/crazy-astronomer/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -51,8 +49,8 @@
                   "maximumError": "8kB"
                 }
               ],
-              "optimization":{
-                "styles":{
+              "optimization": {
+                "styles": {
                   "inlineCritical": false
                 }
               },
@@ -90,11 +88,8 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
-            "tsConfig": "tsconfig.spec.json",
+            "polyfills": ["zone.js", "zone.js/testing"],
+            "tsConfig": "apps/crazy-astronomer/tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
               {
@@ -104,8 +99,94 @@
             ],
             "styles": [
               "@angular/material/prebuilt-themes/azure-blue.css",
-              "src/styles.scss"
+              "apps/crazy-astronomer/src/styles.scss"
             ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "crazy-librarian": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/crazy-librarian",
+            "index": "apps/crazy-librarian/src/index.html",
+            "browser": "apps/crazy-librarian/src/main.ts",
+            "polyfills": ["zone.js"],
+            "tsConfig": "apps/crazy-librarian/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
+            ],
+            "styles": ["apps/crazy-librarian/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "crazy-librarian:build:production"
+            },
+            "development": {
+              "buildTarget": "crazy-librarian:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": ["zone.js", "zone.js/testing"],
+            "tsConfig": "apps/crazy-librarian/tsconfig.spec.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
+            ],
+            "styles": ["apps/crazy-librarian/src/styles.scss"],
             "scripts": []
           }
         }

@@ -1,32 +1,31 @@
 {
-    "name": "crazy-astronomer",
-    "root": "apps/crazy-astronomer",
+    "name": "crazy-librarian",
+    "root": "apps/crazy-librarian",
     "$schema": "../../node_modules/nx/schemas/project-schema.json",
     "projectType": "application",
     "prefix": "app",
-    "sourceRoot": "apps/crazy-astronomer/src",
+    "sourceRoot": "apps/igor-librarian/src",
     "tags": [],
     "targets": {
       "build": {
         "executor": "@angular-devkit/build-angular:application",
         "outputs": ["{options.outputPath}"],
         "options": {
-          "outputPath": "dist/apps/crazy-astronomer",
-          "index": "apps/crazy-astronomer/src/index.html",
-          "browser": "apps/crazy-astronomer/src/main.ts",
+          "outputPath": "dist/apps/crazy-librarian",
+          "index": "apps/crazy-librarian/src/index.html",
+          "browser": "apps/crazy-librarian/src/main.ts",
           "polyfills": ["zone.js"],
-          "tsConfig": "apps/crazy-astronomer/tsconfig.app.json",
+          "tsConfig": "apps/crazy-librarian/tsconfig.app.json",
           "inlineStyleLanguage": "scss",
           "assets": [
             {
               "glob": "**/*",
-              "input": "apps/crazy-astronomer/public"
+              "input": "apps/crazy-librarian/public"
             }
           ],
-          "styles": ["apps/crazy-astronomer/src/styles.scss"],
+          "styles": ["apps/crazy-librarian/src/styles.scss"],
           "scripts": [],
-          "server": "apps/crazy-astronomer/src/main.server.ts"
-
+          "server": "apps/crazy-librarian/src/main.server.ts"
         },
         "configurations": {
           "production": {
@@ -56,10 +55,10 @@
         "executor": "@angular-devkit/build-angular:dev-server",
         "configurations": {
           "production": {
-            "buildTarget": "crazy-astronomer:build:production"
+            "buildTarget": "crazy-librarian:build:production"
           },
           "development": {
-            "buildTarget": "crazy-astronomer:build:development"
+            "buildTarget": "crazy-librarian:build:development"
           }
         },
         "defaultConfiguration": "development"
@@ -67,7 +66,7 @@
       "extract-i18n": {
         "executor": "@angular-devkit/build-angular:extract-i18n",
         "options": {
-          "buildTarget": "crazy-astronomer:build"
+          "buildTarget": "crazy-librarian:build"
         }
       },
       "lint": {
@@ -77,15 +76,15 @@
         "executor": "@nx/jest:jest",
         "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
         "options": {
-          "jestConfig": "apps/crazy-astronomer/jest.config.ts"
+          "jestConfig": "apps/crazy-librarian/jest.config.ts"
         }
       },
       "serve-static": {
         "executor": "@nx/web:file-server",
         "options": {
-          "buildTarget": "crazy-astronomer:build",
+          "buildTarget": "crazy-librarian:build",
           "port": 4200,
-          "staticFilePath": "dist/apps/crazy-astronomer/browser",
+          "staticFilePath": "dist/apps/crazy-librarian/browser",
           "spa": true
         }
       }
