@@ -22,7 +22,7 @@ export class ConstellationListComponent implements OnInit {
   ngOnInit(): void {
     // this.constellationDataSource.paginator = this.paginator;
     // this.constellationDataSource.sort = this.sort;
-    console.log(this.constellationDataSource.data);
+    //console.log(this.constellationDataSource.data);
   }
 
   selectConstellation(id: string){

@@ -17,14 +17,12 @@ export class HeaderComponent implements OnInit,OnDestroy {
   starName= 'starName';
   activeConstellation$ =  this.constellationService.getActiveConstellation$();
   activeConstellationName$= this.activeConstellation$.pipe(map(cnstl=>cnstl.name))
-  constructor(){
-   
-  }
+
   ngOnInit(): void {
     //this.activeConstalation$.subscribe(cnstl=>this.constellationName=cnstl.name);
-    throw new Error('Method not implemented.');
+    //throw new Error('Method not implemented.');
   }
   ngOnDestroy(): void {
-    throw new Error('Method not implemented.');
+    //throw new Error('Method not implemented.');
   }
 }
